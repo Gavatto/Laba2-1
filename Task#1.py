@@ -17,24 +17,24 @@ class Ticket:
         self._price = value
 
     def __str__(self):
-        return f'{self.number} - {self.price}'
+        return f"{self.number} - {self.price}"
 
 
-class Advance_Ticket:
+class Advance(Ticket):
 
     def __init__(self, number):
         super().__init__(number)
         self.price = self.price - self.price * 0.4
 
 
-class Student_Ticket:
+class Student(Ticket):
 
     def __init__(self, number):
         super().__init__(number)
         self.price = self.price - self.price * 0.5
 
 
-class Late_Ticket:
+class Late(Ticket):
 
     def __init__(self, number):
         super().__init__(number)
